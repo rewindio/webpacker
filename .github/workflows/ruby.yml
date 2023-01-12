@@ -41,6 +41,7 @@ jobs:
             os: ubuntu-latest
             gemfile: gemfiles/Gemfile-rails-edge
             experimental: true
+            rubygems: latest
           - ruby: 3.0
             os: ubuntu-latest
             gemfile: gemfiles/Gemfile-rails-edge
@@ -61,6 +62,7 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
+          rubygems: ${{ matrix.rubygems }}
 
       - name: Bundle install
         run: |
