@@ -49,10 +49,12 @@ jobs:
             os: ubuntu-latest
             gemfile: gemfiles/Gemfile-rails-edge
             experimental: true
+            rubygems: latest
           - ruby: 3.0
             os: ubuntu-latest
             gemfile: gemfiles/Gemfile-rails-edge
             experimental: true
+            rubygems: latest
 
     steps:
       - uses: actions/checkout@v3
