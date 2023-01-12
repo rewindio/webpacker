@@ -26,10 +26,6 @@ jobs:
           "gemfiles/Gemfile-rails.6.0.x",
           "gemfiles/Gemfile-rails.6.1.x"
         ]
-        rubygems: [
-          "default",
-          "latest"
-        ]
         exclude:
           - ruby: 2.4
             gemfile: gemfiles/Gemfile-rails.6.0.x
@@ -39,16 +35,6 @@ jobs:
             gemfile: gemfiles/Gemfile-rails.6.1.x
           - ruby: 3.0
             gemfile: gemfiles/Gemfile-rails.5.2.x
-          - ruby: 2.4
-            rubygems: latest
-          - ruby: 2.5
-            rubygems: latest
-          - ruby: 2.6
-            rubygems: default
-          - ruby: 2.7
-            rubygems: default
-          - ruby: 3.0
-            rubygems: default
         experimental: [false]
         include:
           - ruby: 2.7
@@ -59,6 +45,10 @@ jobs:
             os: ubuntu-latest
             gemfile: gemfiles/Gemfile-rails-edge
             experimental: true
+          - ruby: 2.7
+            rubygems: latest
+          - ruby: 3.0
+            rubygems: latest
 
     steps:
       - uses: actions/checkout@v3
